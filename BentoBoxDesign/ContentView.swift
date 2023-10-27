@@ -9,7 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        HStack {
+            VStack {
+                HStack {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.gray)
+                        VStack {
+                            Spacer()
+                            
+                            //Image("Thunderbolt")
+                            Image(systemName: "cloud.bolt.rain")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 125)
+                                .colorInvert()
+                            Spacer()
+                            
+                            Text("Thunderbolt 4")
+                            
+                            Spacer()
+                                .frame(height: 10)
+                        }
+                    }
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.gray)
+                    
+                    
+                    
+                }
+            }
+            
+            
+            
             ZStack {
                 Rectangle()
                     .fill(.gray)
@@ -20,7 +53,7 @@ struct ContentView: View {
                         .scaledToFit()
                         .frame(width: 250)
 
-                    Image("Thunderbolt")
+
                 }
             }
             
