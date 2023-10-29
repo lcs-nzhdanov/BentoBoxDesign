@@ -69,8 +69,9 @@ struct ContentView: View {
                             Text("Thunderbolt 4")
                                 .foregroundStyle(Color.black)
                                 .bold()
+                                .font(.system(size: 10))
                             
-                            Spacer()
+                            Spacer(minLength: 13)
                         }
                     }
                     
@@ -79,23 +80,24 @@ struct ContentView: View {
                             .fill(.gray)
                         
                         VStack {
-                            Spacer()
                             
                             Text("Up to")
                                 .foregroundStyle(Color.black)
                                 .bold()
+                                .font(.system(size: 10))
                             
                             Text("20%")
                                 .foregroundStyle(textGradient)
                                 .font(.system(size: 44))
                                 .bold()
-                                .frame(height: 60)
+                                .padding(4)
                             
                             Text("faster CPU")
                                 .foregroundStyle(Color.black)
                                 .bold()
+                                .font(.system(size: 10))
+                                .padding(1)
                             
-                            Spacer()
                         }
                     }
                         
@@ -103,22 +105,107 @@ struct ContentView: View {
                 .frame(height: 122.5)
                 
                 
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.gray)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.gray)
+                    
+                    VStack {
+                        Text("Over")
+                            .foregroundStyle(textGradient)
+                            .font(.system(size: 15))
+                            .bold()
+                        
+                        Text("67 billion")
+                            .foregroundStyle(textGradient)
+                            .font(.system(size: 44))
+                            .bold()
+                        
+                        Text("transistors")
+                            .foregroundStyle(textGradient)
+                            .font(.system(size: 15))
+                            .bold()
+                    }
+                    .frame(height: 100)
+                }
                 
                 
                 HStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.gray)
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.gray)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.gray)
+                        
+                        VStack {
+                            
+                            Text("16-core")
+                                .foregroundStyle(Color.black)
+                                .bold()
+                                .font(.system(size: 10))
+                            
+                            Text("""
+                                 Neural
+                                 Engine
+                                 """)
+                                .foregroundStyle(textGradient)
+                                .font(.system(size: 25))
+                                .bold()
+                                .padding(4)
+                                .frame(height: 66)
+                            
+                            Text("15.8 trillion ops/s")
+                                .foregroundStyle(Color.black)
+                                .bold()
+                                .font(.system(size: 10))
+                                .padding(1)
+
+
+                        }
+                        .frame(height: 100)
+                    }
+                    
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.gray)
+                        VStack {
+                            Spacer()
+                            
+                            Text("40%")
+                                .foregroundStyle(textGradient)
+                                .font(.system(size: 44))
+                                .bold()
+                                .padding(4)
+                                .frame(height: 66)
+                            
+                            
+                            Spacer()
+                            
+                            Text("Faster Neural Engine")
+                                .foregroundStyle(Color.black)
+                                .bold()
+                                .font(.system(size: 10))
+                        }
+                        .frame(height: 100)
+                    }
                 }
                 .frame(height: 122.5)
                 
                 
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.gray)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.gray)
                     .frame(height: 85)
+                    
+                    Text("""
+                         High-perfomance
+                         media engine with ProRes
+                         """)
+        
+                        .foregroundStyle(Color.black)
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: 18))
+                        .bold()
+                        .frame(height: 80)
+                }
             }
             .frame(width: 240)
             
@@ -132,23 +219,24 @@ struct ContentView: View {
                         .frame(width: 120)
                         
                         VStack {
-                            Spacer()
                             
                             Text("Up to")
                                 .foregroundStyle(Color.black)
                                 .bold()
+                                .font(.system(size: 10))
                             
                             Text("30%")
                                 .foregroundStyle(textGradient)
                                 .font(.system(size: 44))
                                 .bold()
-                                .frame(height: 60)
+                                .padding(4)
                             
-                            Text("faster GPU")
+                            Text("faster CPU")
                                 .foregroundStyle(Color.black)
                                 .bold()
+                                .font(.system(size: 10))
+                                .padding(1)
                             
-                            Spacer()
                         }
                     }
                     
@@ -197,17 +285,65 @@ struct ContentView: View {
                 }
                 
                 
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.gray)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.gray)
                     .frame(height: 85)
+                    
+                    VStack {
+                        VStack {
+                            Spacer(minLength: 10)
+                            
+                            Text("Second generation")
+                                .foregroundStyle(Color.black)
+                                .bold()
+                                .font(.system(size: 10))
+                                .padding(0)
+                            
+                            Text("5nm technology")
+                                .foregroundStyle(textGradient)
+                                .font(.system(size: 32))
+                                .bold()
+                                
+                            Spacer()
+                                .padding(0)
+                            
+                            
+                        }
+                        .frame(height: 80)
+                    }
+                }
             }
             
             
             
             VStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.gray)
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.gray)
                     .frame(height: 122.5)
+                    
+                    
+                    VStack {
+                        Text("Up to")
+                            .foregroundStyle(Color.black)
+                            .bold()
+                            .font(.system(size: 10))
+                        
+                        Text("96GB")
+                            .foregroundStyle(textGradient)
+                            .font(.system(size: 65))
+                            .bold()
+                            .frame(height: 60)
+                            .padding(3)
+                        
+                        Text("LPDDR5 memory")
+                            .foregroundStyle(Color.black)
+                            .bold()
+                            .font(.system(size: 10))
+                    }
+                }
                 
                 HStack {
                     RoundedRectangle(cornerRadius: 20)
@@ -216,9 +352,33 @@ struct ContentView: View {
                         .fill(.gray)
                 }
                 
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.gray)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.gray)
                     .frame(height: 170)
+                    
+                    VStack {
+                        VStack {
+                            Spacer()
+                            
+                            Text("400GB/s")
+                                .foregroundStyle(textGradient)
+                                .font(.system(size: 50))
+                                .bold()
+                            
+                            Text("Memory bandwidth")
+                                .foregroundStyle(Color.black)
+                                .bold()
+                                .font(.system(size: 20))
+                                .padding(0)
+
+                            Spacer()
+                                .padding(0)
+                            
+                        }
+                        .frame(height: 80)
+                    }
+                }
             }
             .frame(width: 240)
             
