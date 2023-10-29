@@ -64,7 +64,7 @@ struct ContentView: View {
                             Image("Thunderbolt")
                                   .resizable()
                                   .scaledToFit()
-                              .frame(width: 100)
+                                  .frame(width: 100, height: 98)
                             
                             Text("Thunderbolt 4")
                                 .foregroundStyle(Color.black)
@@ -73,6 +73,7 @@ struct ContentView: View {
                             
                             Spacer(minLength: 13)
                         }
+                        .frame(height: 90)
                     }
                     
                     ZStack {
@@ -282,6 +283,7 @@ struct ContentView: View {
                                 .frame(height: 30)
                         }
                     }
+                    .frame(height: 200)
                 }
                 
                 
@@ -343,14 +345,90 @@ struct ContentView: View {
                             .bold()
                             .font(.system(size: 10))
                     }
+                    .frame(height: 120)
                 }
                 
                 HStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.gray)
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.gray)
-                }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.gray)
+                        
+                        
+                        VStack {
+                            Spacer()
+                            
+                            Image("CPU2")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                            
+                            VStack {
+                                Text("12-core")
+                                    .foregroundStyle(textGradient)
+                                    .font(.system(size: 24))
+                                    .bold()
+                                
+                                Text("CPU")
+                                    .foregroundStyle(Color.black)
+                                    .bold()
+                                    .font(.system(size: 10))
+
+                            }
+                            .padding(7)
+
+                            
+  
+
+                        }
+                        .frame(height: 170)
+                    }
+                      
+                    
+                    
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.gray)
+                            
+                            
+                            VStack {
+                                Spacer()
+                                
+                                Image("GPU2")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 105, height: 105)
+                                
+                                
+                                
+                                VStack {
+                                    Text("Up to")
+                                        .foregroundStyle(Color.black)
+                                        .bold()
+                                        .font(.system(size: 10))
+                                    
+                                    Text("38-core")
+                                        .foregroundStyle(textGradient)
+                                        .font(.system(size: 24))
+                                        .bold()
+                                    
+                                    Text("GPU")
+                                        .foregroundStyle(Color.black)
+                                        .bold()
+                                        .font(.system(size: 10))
+                                    
+                                    Spacer(minLength: 15)
+
+                                }
+                                .padding(10)
+
+                                
+      
+
+                            }
+                            .frame(height: 170)
+                        }
+                    }
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
